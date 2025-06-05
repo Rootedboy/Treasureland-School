@@ -1,0 +1,57 @@
+/* Read More Functionality */
+.readmore-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: all 0.3s ease;
+    line-height: 1.5;
+    max-height: 4.5em;
+    /* 3 lines * 1.5 line-height */
+}
+
+.readmore-text.expanded {
+    -webkit-line-clamp: unset;
+    max-height: none;
+}
+
+.readmore-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2em;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.readmore-text.expanded::after {
+    opacity: 0;
+}
+
+.readmore-toggle {
+    color: #1eaaf1;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 0.5em;
+    transition: color 0.3s ease;
+}
+
+.readmore-toggle:hover {
+    color: #0d8ed9;
+    text-decoration: underline;
+}
+
+/* Adjust for dark backgrounds */
+.bg-primary .readmore-text::after,
+.bg-secondary .readmore-text::after,
+.bg-tertiary .readmore-text::after,
+.bg-quarternary .readmore-text::after,
+.bg-dark .readmore-text::after {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
