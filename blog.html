@@ -58,12 +58,85 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="teacher.html" class="nav-link">Teachers</a></li>
-                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
-                    <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-info-circle mr-2"></i>About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="about.html">
+                                <i class="fas fa-school mr-2"></i>About Us
+                            </a>
+                            <a class="dropdown-item" href="founder-message.html">
+                                <i class="fas fa-quote-left mr-2"></i>Founder's Message
+                            </a>
+                            <a class="dropdown-item" href="school-history.html">
+                                <i class="fas fa-history mr-2"></i>School History
+                            </a>
+                            <a class="dropdown-item" href="mission-vision.html">
+                                <i class="fas fa-bullseye mr-2"></i>Mission & Vision
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-graduation-cap mr-2"></i>Academics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="academicsDropdown">
+                            <a class="dropdown-item" href="academics.html#creche">
+                                <i class="fas fa-baby mr-2"></i>Creche
+                            </a>
+                            <a class="dropdown-item" href="academics.html#preschool">
+                                <i class="fas fa-child mr-2"></i>Pre-School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#primary">
+                                <i class="fas fa-school mr-2"></i>Primary School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#extracurricular">
+                                <i class="fas fa-futbol mr-2"></i>Extra Curricular Activities
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link">
+                            <i class="fas fa-file-signature mr-2"></i>Admission
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-users mr-2"></i>Our Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                            <a class="dropdown-item" href="Our_Team.html#admin">
+                                <i class="fas fa-user-tie mr-2"></i>Admin Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#teaching">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i>Teaching Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#non-teaching">
+                                <i class="fas fa-hands-helping mr-2"></i>Non-Teaching Staff
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="blog.html" class="nav-link">
+                            <i class="fas fa-blog mr-2"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -98,100 +171,31 @@
 		</section>
 
 		<!-- Add this before the closing body tag -->
-		<script>
-		// TikTok Feed Configuration
-		const TIKTOK_USERNAME = 'treasurelandschools';
-		const TIKTOK_VIDEOS = [
-			{ id: '7509737324020845830', title: 'Fun learning activities at Treasureland Elementary! 🎨✏️' },
-			{ id: '7509175490910129414', title: 'Our amazing students showing off their science projects! 🔬' },
-			{ id: '7485703302315773192', title: 'Field trip fun! 🌳 Learning outside the classroom.' },
-			{ id: '7509737324020845830', title: 'Celebrating our students\' achievements! 🏆' },
-			{ id: '7509175490910129414', title: 'Art class masterpiece in the making! 🎨' },
-			{ id: '7485703302315773192', title: 'Sports day highlights! 🏃‍♂️⚽' }
-		];
+        <!-- TikTok Feed Section -->
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-2">
+                    <div class="col-md-8 text-center heading-section ftco-animate">
+                        <h2 class="mb-4"><i class="fab fa-tiktok text-danger"></i> Latest Updates</h2>
+                        <p>Follow our latest activities and events on TikTok</p>
+                    </div>
+                </div>
+                <div id="tiktok-feed" class="row">
+                    <!-- TikTok embeds will be loaded here -->
+                </div>
+            </div>
+        </section>
 
-		// Function to create TikTok embed
-		function createTikTokEmbed(video) {
-			const col = document.createElement('div');
-			col.className = 'col-md-6 col-lg-4 mb-4';
-
-			const blogEntry = document.createElement('div');
-			blogEntry.className = 'blog-entry bg-white rounded shadow-sm p-3';
-
-			const block = document.createElement('blockquote');
-			block.className = 'tiktok-embed';
-			block.setAttribute('cite', `https://www.tiktok.com/@${TIKTOK_USERNAME}/video/${video.id}`);
-
-			const videoContainer = document.createElement('div');
-			videoContainer.className = 'tiktok-video';
-			videoContainer.style = 'position: relative; padding-bottom: 125%; margin: 0 auto; max-width: 100%;';
-
-			const iframe = document.createElement('iframe');
-			iframe.src = `https://www.tiktok.com/embed/v2/${video.id}`;
-			iframe.style = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;';
-			iframe.setAttribute('allowfullscreen', '');
-			iframe.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-
-			const caption = document.createElement('p');
-			caption.className = 'mt-2 text-center';
-			caption.textContent = video.title;
-
-			// Create interaction buttons
-			const interactionsDiv = document.createElement('div');
-			interactionsDiv.className = 'd-flex justify-content-around mt-2 pt-2 border-top';
-
-			const likeButton = document.createElement('button');
-			likeButton.className = 'btn btn-sm btn-outline-danger';
-			likeButton.innerHTML = '<i class="far fa-heart"></i> Like';
-			likeButton.onclick = () => alert('Liked video: ' + video.title);
-
-			const shareButton = document.createElement('button');
-			shareButton.className = 'btn btn-sm btn-outline-primary';
-			shareButton.innerHTML = '<i class="fas fa-share"></i> Share';
-			shareButton.onclick = () => {
-				const videoUrl = `https://www.tiktok.com/@${TIKTOK_USERNAME}/video/${video.id}`;
-				if (navigator.share) {
-					navigator.share({
-						title: video.title,
-						text: `Check out this TikTok video: ${video.title}`,
-						url: videoUrl
-					}).catch(console.error);
-				} else {
-					alert('Share this video: ' + videoUrl);
-				}
-			};
-
-			interactionsDiv.appendChild(likeButton);
-			interactionsDiv.appendChild(shareButton);
-
-			videoContainer.appendChild(iframe);
-			block.appendChild(videoContainer);
-			block.appendChild(caption);
-			blogEntry.appendChild(block);
-			blogEntry.appendChild(interactionsDiv); // Add interactions below the blockquote
-			col.appendChild(blogEntry);
-
-			return col;
-		}
-
-		// Load TikTok embeds when the page loads
-		document.addEventListener('DOMContentLoaded', function() {
-			const container = document.getElementById('tiktok-feed');
-			if (container) {
-				TIKTOK_VIDEOS.forEach(video => {
-					container.appendChild(createTikTokEmbed(video));
-				});
-			}
-			// Ensure Font Awesome is loaded for icons
-			let fontAwesomeLink = document.querySelector('link[href*="fontawesome"]');
-			if (!fontAwesomeLink) {
-				fontAwesomeLink = document.createElement('link');
-				fontAwesomeLink.rel = 'stylesheet';
-				fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
-				document.head.appendChild(fontAwesomeLink);
-			}
-		});
-		</script>
+        <!-- TikTok Feed Script -->
+        <script src="js/tiktok-feed.js"></script>
+        <script>
+            // Initialize TikTok feed when the page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                loadTikTokEmbeds().catch(error => {
+                    console.error('Error loading TikTok feed:', error);
+                });
+            });
+        </script>
 			</div>
 		</section>
 

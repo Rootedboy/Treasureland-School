@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/readmore.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- TikTok Embed SDK -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 
 <body>
@@ -35,15 +38,15 @@
                     <div class="row d-flex">
                         <div class="col-md-5 pr-4 d-flex topper align-items-center">
                             <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                            <span class="text">Block 37 JDPC, Off Stadium Road, Opp Farmers Market, GRA, Ijebu Ode</span>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Treasureland+Elementary+School+Ijebu+Ode" target="_blank" class="text text-white">Block 37 JDPC, Off Stadium Road, Opp Farmers Market, GRA, Ijebu Ode</a>
                         </div>
                         <div class="col-md pr-4 d-flex topper align-items-center">
                             <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                            <span class="text">tayoxy@gmail.com</span>
+                            <a href="mailto:tayoxy@gmail.com" class="text text-white">tayoxy@gmail.com</a>
                         </div>
                         <div class="col-md pr-4 d-flex topper align-items-center">
                             <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-                            <span class="text">+234 903 170 2443</span>
+                            <a href="https://wa.me/+2349031702443" target="_blank" class="text text-white">+234 903 170 2443</a>
                         </div>
                     </div>
                 </div>
@@ -61,12 +64,85 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="teachers.html" class="nav-link">Teachers</a></li>
-                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-info-circle mr-2"></i>About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="about.html">
+                                <i class="fas fa-school mr-2"></i>About Us
+                            </a>
+                            <a class="dropdown-item" href="founder-message.html">
+                                <i class="fas fa-quote-left mr-2"></i>Founder's Message
+                            </a>
+                            <a class="dropdown-item" href="school-history.html">
+                                <i class="fas fa-history mr-2"></i>School History
+                            </a>
+                            <a class="dropdown-item" href="mission-vision.html">
+                                <i class="fas fa-bullseye mr-2"></i>Mission & Vision
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-graduation-cap mr-2"></i>Academics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="academicsDropdown">
+                            <a class="dropdown-item" href="academics.html#creche">
+                                <i class="fas fa-baby mr-2"></i>Creche
+                            </a>
+                            <a class="dropdown-item" href="academics.html#preschool">
+                                <i class="fas fa-child mr-2"></i>Pre-School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#primary">
+                                <i class="fas fa-school mr-2"></i>Primary School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#extracurricular">
+                                <i class="fas fa-futbol mr-2"></i>Extra Curricular Activities
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link">
+                            <i class="fas fa-file-signature mr-2"></i>Admission
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-users mr-2"></i>Our Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                            <a class="dropdown-item" href="Our_Team.html#admin">
+                                <i class="fas fa-user-tie mr-2"></i>Admin Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#teaching">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i>Teaching Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#non-teaching">
+                                <i class="fas fa-hands-helping mr-2"></i>Non-Teaching Staff
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">
+                            <i class="fas fa-book-open mr-2"></i>Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">
+                            <i class="fas fa-blog mr-2"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -248,123 +324,10 @@
                     <p>At Treasureland Elementary, we are committed to providing our students with the best possible education. Our teachers are highly qualified and experienced, with a deep understanding of the subjects they teach. They are dedicated to helping our students develop a love for learning and a strong foundation of knowledge, preparing them for future academic and personal success.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/Miss_Adegoke.JPG);"></div>
-                        </div>
-                        <div class="text pt-3 text-center">
-                            <h3>Folashade Adegoke</h3>
-                            <span class="position mb-2">English Studies and PREVOCATIONAL STUDIES</span>
-                            <div class="faded">
-                                <p>Primary four</p>
-                                <p class="readmore-text">My name is Folashade Grace Adegoke, currently serving as the Head of Primary Four. I am a graduate of Tai Solarin University of Education with a decade of professional teaching experience. I have a deep interest in baking, singing, and nurturing young minds. My passion lies in supporting children from divorced homes as they navigate challenging seasons.</p>
-                                <p>"Don't wait for the perfect moment. Take the moment and make it perfect."</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/Miss_Helen.JPG);"></div>
-                        </div>
-                        <div class="text pt-3 text-center">
-                            <h3>Taiwo Helen. I.</h3>
-                            <span class="position mb-2">Class Teacher</span>
-                            <div class="faded">
-                                <p>Nursery 2</p>
-                                <p class="readmore-text">A passionate and dedicated Educator who believes in creating an inclusive, engaging and supportive learning environment for learners.</p>
-                                <p>"The difference between HERE and THERE is just letter T. And that T stands for TIME. With Time, you will surely get there."</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/Miss_Bosede.JPG);"></div>
-                        </div>
-                        <div class="text pt-3 text-center">
-                            <h3>Kowe Bosede Mercy</h3>
-                            <span class="position mb-2">Mathematics, Religion and National Value</span>
-                            <div class="faded">
-                                <p>Basic 1</p>
-                                <p class="readmore-text">I am a creative and spontaneous educator with high sense of awareness</p>
-                                <p>"Life is good"</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="staff">
-                        <div class="img-wrap d-flex align-items-stretch">
-                            <div class="img align-self-stretch" style="background-image: url(images/Miss_Adebanjo);"></div>
-                        </div>
-                        <div class="text pt-3 text-center">
-                            <h3>Adebanjo Bushrah Adeayo</h3>
-                            <span class="position mb-2">All subjects</span>
-                            <div class="faded">
-                                <p>Grade 7</p>
-                                <p class="readmore-text">My name is Adebanjo Bushrah. A curious and creative individual who loves learning and exploring new ideas.</p>
-                                <p>"A stich in time saves nine."</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-2">
-                <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4"><span>Our</span> Courses</h2>
-                    <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 course d-lg-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/course-1.jpg);"></div>
-                    <div class="text bg-light p-4">
-                        <h3><a href="#">Arts Lesson</a></h3>
-                        <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                    </div>
-                </div>
-                <div class="col-md-6 course d-lg-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/course-2.jpg);"></div>
-                    <div class="text bg-light p-4">
-                        <h3><a href="#">Language Lesson</a></h3>
-                        <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                    </div>
-                </div>
-                <div class="col-md-6 course d-lg-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/course-3.jpg);"></div>
-                    <div class="text bg-light p-4">
-                        <h3><a href="#">Music Lesson</a></h3>
-                        <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                    </div>
-                </div>
-                <div class="col-md-6 course d-lg-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/course-4.jpg);"></div>
-                    <div class="text bg-light p-4">
-                        <h3><a href="#">Sports Lesson</a></h3>
-                        <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -480,7 +443,7 @@
                                     <span class="quote d-flex align-items-center justify-content-center">
                                         <i class="icon-quote-left"></i>
                                     </span>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p></p>
                                     <p class="name">Rodel Golez</p>
                                     <span class="position">Mother</span>
                                 </div>
@@ -511,8 +474,8 @@
             <div class="row justify-content-end">
                 <div class="col-md-6 py-5 px-md-5 bg-primary">
                     <div class="heading-section heading-section-white ftco-animate mb-5">
-                        <h2 class="mb-4">Request A Quote</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h2 class="mb-4">Enquiry</h2>
+                        <p>Fill in the form below to send us an enquiry.</p>
                     </div>
                     <form action="#" class="appointment-form ftco-animate">
                         <div class="d-md-flex">
@@ -548,7 +511,7 @@
                                 <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
                             </div>
                             <div class="form-group ml-md-4">
-                                <input type="submit" value="Request A Quote" class="btn btn-secondary py-3 px-4">
+                                <input type="submit" value="Send Enquiry" class="btn btn-secondary py-3 px-4">
                             </div>
                         </div>
                     </form>
@@ -557,213 +520,83 @@
         </div>
     </section>
 
-
-    <!-- Social Media Feed Section -->
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4">Connect With <span>Us</span></h2>
-                    <p>Stay updated with the latest news, events, and activities at Treasureland Elementary School through our social media channels.</p>
+                    <h2 class="mb-4">Stay <span>Connected</span></h2>
+                    <p>Follow us on social media to stay updated with the latest news and events at Treasureland Elementary School.</p>
                 </div>
             </div>
-
-            <!-- Facebook Feed -->
-            <div class="row mb-5">
-                <div class="col-12 text-center mb-4">
-                    <h3><i class="icon-facebook text-primary mr-2"></i> Facebook</h3>
-                </div>
-                <div class="col-md-4 ftco-animate
-                <div class=" facebook-post">
-                    <div class="post-header">
-                        <img src="images/tes-logo.png" alt="TES Logo" class="profile-pic">
-                        <div class="post-info">
-                            <h5>Treasureland Elementary School</h5>
-                            <span class="post-time">2 hrs ago</span>
-                        </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/treasurelandschoolijebuode" class="p-3" target="_blank" rel="noopener" title="Facebook">
+                            <span class="icon-facebook"></span>
+                        </a>
+                        <a href="https://www.instagram.com/treasurelandschoolijebuode/" class="p-3" target="_blank" rel="noopener" title="Instagram">
+                            <span class="icon-instagram"></span>
+                        </a>
+                        <a href="https://www.tiktok.com/@treasurelandschoolijebuode" class="p-3" target="_blank" rel="noopener" title="TikTok">
+                            <span class="fab fa-tiktok"></span>
+                        </a>
+                        <a href="https://www.youtube.com/@treasurelandschoolijebuode" class="p-3" target="_blank" rel="noopener" title="YouTube">
+                            <span class="icon-youtube"></span>
+                        </a>
                     </div>
-                    <div class="post-content">
-                        <p>🎉 End of Term Celebration! 🎊 Our students had an amazing time at the end-of-term party. Looking forward to more exciting activities next term! #TESMoments #EndOfTermCelebration</p>
-                        <img src="images/event1.jpg" alt="School Event" class="img-fluid mb-3">
-                        <div class="post-actions">
-                            <span><i class="icon-heart"></i> 124</span>
-                            <span><i class="icon-chat"></i> 23</span>
-                            <span><i class="icon-share"></i> Share</span>
-                        </div>
-                    </div>
+                    <p class="mt-4">Visit our <a href="blog.html" class="btn btn-primary">Blog</a> for the latest updates and stories from our school community.</p>
                 </div>
             </div>
-
-            <!-- Instagram Feed -->
-            <div class="col-md-4 ftco-animate">
-                <div class="instagram-post">
-                    <div class="post-header">
-                        <img src="images/tes-logo.png" alt="TES Logo" class="profile-pic">
-                        <div class="post-info">
-                            <h5>@treasureland_school</h5>
-                            <span class="post-time">5 hrs ago</span>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <img src="images/class1.jpg" alt="Class Activity" class="img-fluid mb-2">
-                        <p>Learning is fun at TES! Our students enjoying their science experiment today. 🔬 #LearningIsFun #ScienceClass #TESPride</p>
-                        <div class="post-actions">
-                            <span><i class="icon-heart"></i> 89</span>
-                            <span><i class="icon-bubble"></i> 12</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TikTok Feed -->
-            <div class="col-md-4 ftco-animate">
-                <div class="tiktok-post">
-                    <div class="post-header">
-                        <img src="images/tes-logo.png" alt="TES Logo" class="profile-pic">
-                        <div class="post-info">
-                            <h5>@treasureland_es</h5>
-                            <span class="post-time">1 day ago</span>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <div class="tiktok-video">
-                            <img src="images/play-button.png" alt="Play" class="play-button">
-                            <img src="images/activity1.jpg" alt="School Activity" class="img-fluid">
-                        </div>
-                        <p>Our amazing school choir performance! 🎶 #TESChoir #SchoolTalent #ProudMoment</p>
-                        <div class="post-actions">
-                            <span><i class="icon-heart"></i> 245</span>
-                            <span><i class="icon-bubble"></i> 34</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-6 text-center">
-                <p>Follow us for more updates!</p>
-                <div class="social-icons">
-                    <a href="#" class="p-2"><span class="icon-facebook"></span></a>
-                    <a href="#" class="p-2"><span class="icon-instagram"></span></a>
-                    <a href="#" class="p-2"><span class="icon-tiktok"></span></a>
-                    <a href="#" class="p-2"><span class="icon-youtube"></span></a>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <style>
-        .social-media-feed {
-            padding: 20px 0;
-        }
-
-        .social-post {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .social-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .post-header {
+        /* Social Icons Styling */
+        .social-icons {
+            margin: 20px 0;
             display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .profile-pic {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        .post-info h5 {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .post-time {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .post-content {
-            padding: 15px;
-        }
-
-        .post-content p {
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        .post-content img {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .post-actions {
-            display: flex;
-            gap: 20px;
-            color: #666;
-            font-size: 13px;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
-        }
-
-        .post-actions span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .tiktok-video {
-            position: relative;
-            margin-bottom: 10px;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            cursor: pointer;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .social-icons a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #f8f9fa;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
+            background: #f8f9fa;
+            color: #1e7e34;
             text-align: center;
-            line-height: 40px;
-            margin: 0 5px;
-            color: #333;
+            line-height: 1;
             transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            text-decoration: none;
         }
 
         .social-icons a:hover {
-            background: #f0f0f0;
-            transform: translateY(-3px);
+            background: #1e7e34;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons .icon {
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        @media (max-width: 576px) {
+            .social-icons a {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-icons .icon {
+                font-size: 18px;
+            }
         }
     </style>
 
@@ -935,6 +768,7 @@
     <script src="js/main.js"></script>
     <script src="js/readmore.js"></script>
     <script src="js/tiktok-oembed.js"></script>
+    <script src="js/tiktok-feed.js"></script>
 
 </body>
 
