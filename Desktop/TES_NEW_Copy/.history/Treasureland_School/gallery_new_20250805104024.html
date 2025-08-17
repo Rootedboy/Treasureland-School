@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallery - Treasureland Elementary School</title>
+    <link rel="icon" type="image/png" href="images/TES-Logo512-nobg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylel.css">
+    <style>
+        .gallery-container {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .gallery-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 15px;
+        }
+
+        .gallery-folder {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .gallery-folder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .folder-image {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .folder-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(13, 110, 253, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-folder:hover .folder-overlay {
+            opacity: 1;
+        }
+
+        .folder-icon {
+            color: white;
+            font-size: 3rem;
+        }
+
+        .folder-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .folder-content h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+
+        .folder-content p {
+            color: #6c757d;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .gallery-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #f9c56a;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/TES-Logo512-nobg.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                Treasureland Elementary School
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header" style="background-image: url('images/bg_2.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4">Our Gallery</h1>
+                    <p class="lead">Capturing Precious Moments at Treasureland</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Content -->
+    <div class="gallery-container">
+        <div class="container">
+            <div class="gallery-header">
+                <h1>Explore Our Gallery</h1>
+                <p>Browse through our collection of memories and events at Treasureland Elementary School</p>
+            </div>
+
+            <!-- School Facilities -->
+            <div class="gallery-section">
+                <h2 class="section-title">School Facilities</h2>
+                <div class="gallery-grid">
+                    <a href="gallery-school-building.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/school-building-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-school folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>School Building</h3>
+                            <p>Explore our beautiful school facilities and learning environment</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-classrooms.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/classroom-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-chalkboard-teacher folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Classrooms</h3>
+                            <p>Our modern and well-equipped learning spaces</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-playground.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/playground-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-child folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Play Areas</h3>
+                            <p>Safe and fun spaces for our students to play and explore</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pre-School -->
+            <div class="gallery-section">
+                <h2 class="section-title">Pre-School</h2>
+                <div class="gallery-grid">
+                    <a href="gallery-creche.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/creche-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-baby folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Creche</h3>
+                            <p>Our youngest learners in a nurturing environment</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-nursery1.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/nursery1-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-puzzle-piece folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Nursery 1</h3>
+                            <p>Learning through play and exploration</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-nursery2.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/nursery2-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-book-reader folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Nursery 2</h3>
+                            <p>Preparing for the next educational journey</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primary School -->
+            <div class="gallery-section">
+                <h2 class="section-title">Primary School</h2>
+                <div class="gallery-grid">
+                    <a href="gallery-primary1.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/primary1-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-pencil-alt folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Primary 1</h3>
+                            <p>Building strong educational foundations</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-primary2.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/primary2-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-calculator folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Primary 2</h3>
+                            <p>Developing essential skills and knowledge</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-primary3.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/primary3-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-flask folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Primary 3</h3>
+                            <p>Exploring and discovering new concepts</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-primary4.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/primary4-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-microscope folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Primary 4</h3>
+                            <p>Deepening understanding and skills</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-primary5.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/primary5-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-graduation-cap folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Primary 5</h3>
+                            <p>Preparing for the next academic level</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Events & Activities -->
+            <div class="gallery-section">
+                <h2 class="section-title">Events & Activities</h2>
+                <div class="gallery-grid">
+                    <a href="gallery-sports.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/sports-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-futbol folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Sports Day</h3>
+                            <p>Annual sports competitions and activities</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-events.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/events-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-calendar-alt folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>School Events</h3>
+                            <p>Celebrations, ceremonies, and special occasions</p>
+                        </div>
+                    </a>
+
+                    <a href="gallery-fieldtrips.html" class="gallery-folder">
+                        <div class="folder-image" style="background-image: url('images/fieldtrip-1.jpg');">
+                            <div class="folder-overlay">
+                                <i class="fas fa-bus folder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="folder-content">
+                            <h3>Field Trips</h3>
+                            <p>Educational excursions and learning adventures</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 Treasureland Elementary School. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    window.location.hash = hash;
+                });
+            }
+        });
+
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

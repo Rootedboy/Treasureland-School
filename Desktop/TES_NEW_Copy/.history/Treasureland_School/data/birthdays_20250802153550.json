@@ -1,0 +1,30 @@
+{
+    "last_updated": "2025-08-02",
+    "students": [
+        {
+            "name": "Olorunfunmi ODUMOSU",
+            "class": "PRIMARY 1 YELLOW",
+            "birthday": "2025-08-02"
+        },
+        {
+            "name": "Almin Balogun",
+            "class": "PRIMARY 3 LEMON",
+            "birthday": "2025-08-03"
+        },
+        {
+            "name": "Michelle Adedapo",
+            "class": "PRIMARY 3 LEMON",
+            "birthday": "2025-08-04"
+        },
+        {
+            "name": "Christiana Adelaja",
+            "class": "PRIMARY 5 ORANGE",
+            "birthday": "2025-08-06"
+        },
+        {
+            "name": "Deborah ADEKOYA",
+            "class": "PRIMARY 5 ORANGE",
+            "birthday": "2025-08-08"
+        }
+    ]
+}

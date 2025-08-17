@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to School Portal{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 mb-4">Welcome to School Portal</h1>
+            <p class="lead mb-5">A comprehensive school management system for students, teachers, and administrators.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="bi bi-mortarboard" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h3>Students</h3>
+                            <p>Access your classes, assignments, grades, and more in one place.</p>
+                            <a href="{{ url_for('main.login') }}" class="btn btn-outline-primary">Student Login</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="text-success mb-3">
+                                <i class="bi bi-person-badge" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h3>Teachers</h3>
+                            <p>Manage your classes, take attendance, and grade assignments.</p>
+                            <a href="{{ url_for('main.login') }}" class="btn btn-outline-success">Teacher Login</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-people" style="font-size: 2.5rem;"></i>
+                            </div>
+                            <h3>Staff</h3>
+                            <p>Access administrative tools and manage school operations.</p>
+                            <a href="{{ url_for('main.login') }}" class="btn btn-outline-warning">Staff Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 pt-5">
+                <h2 class="h4 mb-4">Need Help?</h2>
+                <p>Contact the school administration for login assistance or technical support.</p>
+                <p>Email: support@schoolportal.edu</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .card {
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .btn {
+        border-radius: 20px;
+        padding: 8px 20px;
+    }
+</style>
+{% endblock %}

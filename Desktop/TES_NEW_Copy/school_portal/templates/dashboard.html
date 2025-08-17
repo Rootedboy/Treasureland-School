@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - School Portal{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Welcome, 
+        {% if user_data %}
+            {{ user_data.full_name }}
+        {% else %}
+            {{ current_user.email }}
+        {% endif %}
+    </h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-calendar3"></i> {{ current_year }}
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row mb-4">
+    {% if current_user.user_type == 'student' %}
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">My Classes</h5>
+                <p class="card-text display-6">{{ stats.classes|default('0') }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Attendance</h5>
+                <p class="card-text display-6">{{ stats.attendance|default('0') }}%</p>
+                <!-- <a href="{{ url_for('attendance') }}" class="text-white">View details <i class="bi bi-arrow-right"></i></a> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Assignments Due</h5>
+                <p class="card-text display-6">{{ stats.assignments_due|default('0') }}</p>
+                <!-- <a href="{{ url_for('assignments') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a> -->
+            </div>
+        </div>
+    </div>
+    {% elif current_user.user_type == 'teacher' %}
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">My Classes</h5>
+                <p class="card-text display-6">{{ stats.classes|default('0') }}</p>
+                <a href="{{ url_for('teacher_classes') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Students</h5>
+                <p class="card-text display-6">{{ stats.students|default('0') }}</p>
+                <a href="{{ url_for('students') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Attendance</h5>
+                <p class="card-text display-6">{{ stats.attendance|default('0') }}%</p>
+                <a href="{{ url_for('take_attendance') }}" class="text-white">Take Attendance <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    {% elif current_user.user_type in ['management', 'admin'] %}
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Teachers</h5>
+                <p class="card-text display-6">{{ stats.teachers|default('0') }}</p>
+                <a href="{{ url_for('list_teachers') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Students</h5>
+                <p class="card-text display-6">{{ stats.students|default('0') }}</p>
+                <a href="{{ url_for('list_students') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Classes</h5>
+                <p class="card-text display-6">{{ stats.classes|default('0') }}</p>
+                <a href="{{ url_for('manage_classes') }}" class="text-white">Manage <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Common card for all user types -->
+    <div class="col-md-3 mb-3">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Announcements</h5>
+                <p class="card-text display-6">{{ stats.announcements|default('0') }}</p>
+                <a href="{{ url_for('announcements') }}" class="text-white">View all <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Upcoming Events Section -->
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-calendar-week me-2"></i> Upcoming Events</span>
+                <a href="{{ url_for('events') }}" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+            <div class="card-body p-0">
+                {% if upcoming_events %}
+                    <div class="list-group list-group-flush">
+                        {% for event in upcoming_events %}
+                        <div class="list-group-item border-0 border-bottom">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">
+                                    {% if event.type == 'assignment' %}
+                                        <i class="bi bi-journal-text text-warning me-2"></i>
+                                    {% elif event.type == 'class' %}
+                                        <i class="bi bi-book text-primary me-2"></i>
+                                    {% elif event.type == 'meeting' %}
+                                        <i class="bi bi-people text-info me-2"></i>
+                                    {% else %}
+                                        <i class="bi bi-calendar-event text-success me-2"></i>
+                                    {% endif %}
+                                    {{ event.title }}
+                                </h6>
+                                <small class="text-muted">{{ event.date.strftime('%b %d, %Y') }}</small>
+                            </div>
+                            <p class="mb-1 text-muted">{{ event.description }}</p>
+                            {% if event.type == 'assignment' %}
+                                <small class="text-warning">
+                                    <i class="bi bi-clock"></i> Due soon
+                                </small>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center p-4">
+                        <i class="bi bi-calendar-x text-muted" style="font-size: 2rem;"></i>
+                        <p class="text-muted mt-2 mb-0">No upcoming events</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Activity Section -->
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-activity me-2"></i>Recent Activity</span>
+                <a href="{{ url_for('activity_log') }}" class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                    {% if recent_activity %}
+                        {% for activity in recent_activity %}
+                        <div class="list-group-item border-0 border-bottom">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">
+                                    {% if activity.type == 'assignment' %}
+                                        <i class="bi bi-journal-text text-primary me-2"></i>
+                                    {% elif activity.type == 'attendance' %}
+                                        <i class="bi bi-clipboard-check text-success me-2"></i>
+                                    {% elif activity.type == 'announcement' %}
+                                        <i class="bi bi-megaphone text-info me-2"></i>
+                                    {% endif %}
+                                    {{ activity.title }}
+                                </h6>
+                                <small class="text-muted">{{ activity.timestamp.strftime('%b %d, %Y') }}</small>
+                            </div>
+                            <p class="mb-1 text-muted">{{ activity.description }}</p>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center p-4">
+                            <i class="bi bi-activity text-muted" style="font-size: 2rem;"></i>
+                            <p class="text-muted mt-2 mb-0">No recent activity</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

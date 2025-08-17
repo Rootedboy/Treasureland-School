@@ -1,0 +1,67 @@
+{% extends "teachers/base.html" %}
+
+{% block title %}Teachers List - School Portal{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item active" aria-current="page">All Teachers</li>
+{% endblock %}
+
+{% block teacher_content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Teachers List</h5>
+        <a href="#" class="btn btn-primary btn-sm">
+            <i class="fas fa-plus"></i> Add New Teacher
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Specialization</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for teacher in teachers %}
+                    <tr>
+                        <td>{{ teacher.employee_id }}</td>
+                        <td>
+                            <a href="{{ url_for('view_teacher', teacher_id=teacher.teacher_id) }}">
+                                {{ teacher.user.last_name }}, {{ teacher.user.first_name }}
+                            </a>
+                        </td>
+                        <td>{{ teacher.user.email }}</td>
+                        <td>{{ teacher.user.phone_number or 'N/A' }}</td>
+                        <td>{{ teacher.specialization or 'N/A' }}</td>
+                        <td>
+                            <div class="btn-group btn-group-sm">
+                                <a href="{{ url_for('view_teacher', teacher_id=teacher.teacher_id) }}" 
+                                   class="btn btn-info" 
+                                   title="View">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{ url_for('edit_teacher', teacher_id=teacher.teacher_id) }}" 
+                                   class="btn btn-warning" 
+                                   title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="6" class="text-center">No teachers found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

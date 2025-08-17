@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallery - Treasureland Elementary School</title>
+    <link rel="icon" type="image/png" href="images/TES-Logo512-nobg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Gallery Folder Styles */
+        .gallery-folder {
+            display: block;
+            text-align: center;
+            padding: 30px 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            color: #2c3e50;
+            text-decoration: none;
+            height: 100%;
+        }
+
+        .gallery-folder:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+        .folder-icon {
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-folder:hover .folder-icon {
+            transform: scale(1.1);
+        }
+
+        .gallery-folder h4 {
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .class-group-section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .class-group-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-section-title {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .gallery-section-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #f9c56a;
+        }
+
+        .class-group-title {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .class-group-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #f9c56a;
+        }
+
+        .teachers {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            background: #fff;
+        }
+
+        .gallery-caption h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .gallery-caption p {
+            color: #666;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .gallery-filter {
+            margin-bottom: 30px;
+        }
+
+        .gallery-filter .btn {
+            margin: 0 5px 10px;
+            border-radius: 20px;
+            padding: 5px 15px;
+            background: #f8f9fa;
+            color: #495057;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s;
+        }
+
+        .gallery-filter .btn:hover,
+        .gallery-filter .btn.active {
+            background: #0d6efd;
+            color: #fff;
+            border-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar-container">
+        <button id="topBarToggle" class="top-bar-toggle" aria-label="Toggle top bar">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="topBar" class="py-2 bg-primary">
+            <div class="container">
+                <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+                    <div class="col-lg-12 d-block">
+                        <div class="row d-flex">
+                            <div class="col-md-5 pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Treasureland+Elementary+School+Ijebu+Ode" target="_blank" class="text text-white">Block 37 JDPC, Off Stadium Road, Opp Farmers Market, GRA, Ijebu Ode</a>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                                <a href="mailto:info@treasurelandschools.com" class="text text-white">info@treasurelandschools.com</a>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                                <a href="https://wa.me/+234 807 455 2156" target="_blank" class="text text-white">+234 807 455 2156</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/TES-Logo512-nobg.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                <span>Treasureland Elementary School</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-info-circle mr-2"></i>About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="about.html">
+                                <i class="fas fa-school mr-2"></i>About Us
+                            </a>
+                            <a class="dropdown-item" href="founder-message.html">
+                                <i class="fas fa-quote-left mr-2"></i>Founder's Message
+                            </a>
+                            <a class="dropdown-item" href="school-history.html">
+                                <i class="fas fa-history mr-2"></i>School History
+                            </a>
+                            <a class="dropdown-item" href="mission-vision.html">
+                                <i class="fas fa-bullseye mr-2"></i>Mission & Vision
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-graduation-cap mr-2"></i>Academics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="academicsDropdown">
+                            <a class="dropdown-item" href="academics.html#creche">
+                                <i class="fas fa-baby mr-2"></i>Creche
+                            </a>
+                            <a class="dropdown-item" href="academics.html#preschool">
+                                <i class="fas fa-child mr-2"></i>Pre-School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#primary">
+                                <i class="fas fa-user-graduate mr-2"></i>Primary School
+                            </a>
+                            <a class="dropdown-item" href="courses.html">
+                                <i class="fas fa-futbol mr-2"></i>Extra Curricular
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link">
+                            <i class="fas fa-file-signature mr-2"></i>Admission
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-users mr-2"></i>Our Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                            <a class="dropdown-item" href="Our_Team.html#admin">
+                                <i class="fas fa-user-tie mr-2"></i>Admin Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#teaching">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i>Teaching Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#non-teaching">
+                                <i class="fas fa-hands-helping mr-2"></i>Non-Teaching Staff
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="gallery.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">
+                            <i class="fas fa-blog mr-2"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Our Gallery</h1>
+                    <p class="breadcrumbs">
+                        <span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span>
+                        <span>Gallery <i class="ion-ios-arrow-forward"></i></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="ftco-section">
+        <div class="container">
+            <!-- Main Gallery Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 text-center">
+                    <h1 class="mb-4">School Gallery</h1>
+                    <p class="lead">Click on any category to view photos</p>
+                </div>
+            </div>
+
+            <!-- Gallery Categories -->
+            <div class="row">
+                <!-- School Building -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-school.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>School Building</h4>
+                    </a>
+                </div>
+
+                <!-- Pre-School -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-preschool.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h4>Pre-School</h4>
+                    </a>
+                </div>
+
+                <!-- Primary School -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-primary.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Primary School</h4>
+                    </a>
+                </div>
+
+                <!-- Events -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-events.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>School Events</h4>
+                    </a>
+                </div>
+
+                <!-- Sports -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-sports.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h4>Sports</h4>
+                    </a>
+                </div>
+
+                <!-- Field Trips -->
+                <div class="col-md-4 mb-4">
+                    <a href="gallery-trips.html" class="gallery-folder">
+                        <div class="folder-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h4>Field Trips</h4>
+                    </a>
+                </div>
+            </div>
+            <!-- Pre-School Section -->
+            <div class="class-group-section mb-5">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-12 text-center">
+                        <h2 class="mb-4">Pre-School Gallery</h2>
+                        <p class="lead">Explore moments from our Creche to Nursery 2 classes</p>
+                    </div>
+                </div>
+
+                <!-- Creche Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h2 class="class-group-title">Our School Building</h2>
+                            <p>A glimpse of our wonderful school facilities and environment</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg1.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg1.jpg" alt="School Building 1" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg2.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg2.jpg" alt="School Building 2" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg3.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg3.jpg" alt="School Building 3" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg4.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg4.jpg" alt="School Building 4" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg5.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg5.jpg" alt="School Building 5" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/bg/School_bg6.jpg" class="image-popup">
+                                        <img src="images/bg/School_bg6.jpg" alt="School Building 6" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5 pb-2">
+                    <div class="col-md-8 text-center heading-section ftco-animate">
+                        <h2 class="mb-4">Our Class Groups</h2>
+                        <p>Meet our wonderful classes and their dedicated teachers</p>
+                    </div>
+                </div>
+
+                <!-- Creche Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Creche</h3>
+                            <p class="teachers">Teachers: Mrs</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 text-center ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Creche/CRECHE.jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Creche/CRECHE.jpg" alt="Creche Class" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h4>Creche</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Play Group Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Play Group</h3>
+                            <p class="teachers">Teachers: Mrs. Abiola, Mrs Adedamola, Mrs Adegbite, Mrs Akintan, Miss Badejo</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Playgroup/PLAY GROUP (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Playgroup/PLAY GROUP (LEMON).jpg" alt="Play Group - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Play Group - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Playgroup/PLAY GROUP (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Playgroup/PLAY GROUP (YELLOW).jpg" alt="Play Group - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Play Group - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Playgroup/PLAY GROUP( ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Playgroup/PLAY GROUP( ORANGE).jpg" alt="Play Group - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Play Group - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Preparatory Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Preparatory</h3>
+                            <p class="teachers">Teachers: Mrs Akinloye, Mrs Aina, Mis Ajayino, Mrs Ogunbiyi, Mrs Osineye, Mrs Odutola, Mrs Olayinka</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Preparatory/Preparatory (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Preparatory/Preparatory (LEMON).jpg" alt="Preparatory - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Preparatory - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Preparatory/Preparatory (GOLD).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Preparatory/Preparatory (GOLD).jpg" alt="Preparatory - Gold" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Preparatory - Gold</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Preparatory/Preparatory (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Preparatory/Preparatory (YELLOW).jpg" alt="Preparatory - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Preparatory - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Preparatory/PREPARATORY (ORANGRE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Preparatory/PREPARATORY (ORANGRE).jpg" alt="Preparatory - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Preparatory - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Nursery 1 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Nursery 1</h3>
+                            <p class="teachers">Teachers: Mrs. Abisagbo, Mrs Badejo, Miss Jimoh, Mrs Ajawa, Mrs Akpojotor, Miss Precious, Mrs Ayantola</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (LEMON).jpg" alt="Nursery 1 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 1 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (ORANGE).jpg" alt="Nursery 1 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 1 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/NURSERY 1/NURSERY 1 (YELLOW).jpg" alt="Nursery 1 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 1 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Nursery 1/NURSERY 1(GOLD).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Nursery 1/NURSERY 1(GOLD).jpg" alt="Nursery 1 - Gold" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 1 - Gold</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nursery 2 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Nursery 2</h3>
+                            <p class="teachers">Teachers: Miss Taiwo, Mrs Banjo, Mrs Adebanjo, Mrs Fowosire, Mrs Oduneye, Mrs Ziborkede</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Nursery 2/NURSERY 2 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Nursery 2/NURSERY 2 (ORANGE).jpg" alt="Nursery 2 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 2 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/NURSERY 2/Nursery. 2 (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/NURSERY 2/Nursery. 2 (LEMON).jpg" alt="Nursery 2 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 2 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/NURSERY 2/NURSERY 2 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/NURSERY 2/NURSERY 2 (YELLOW).jpg" alt="Nursery 2 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Nursery 2 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primary Section -->
+        <div class="class-group-section mb-5" style="background-color: #f0f8ff;">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-12 text-center">
+                    <h2 class="mb-4">Primary School Gallery</h2>
+                    <p class="lead">Explore moments from our Primary 1 to Primary 5 classes</p>
+                </div>
+            </div>
+
+            <!-- Primary 1 Section -->
+            <div class="class-group-section mb-5">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-8 text-center">
+                        <h3 class="class-group-title">Primary 1</h3>
+                        <p class="teachers">Teachers: Mrs.Kowe, Mrs Fajemidagba, Mr. Okunowo, Miss Mgbolu, Mrs. Mgbeoji</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_1/PRY. 1 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_1/PRY. 1 (YELLOW).jpg" alt="Primary 1 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 1 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_1/PRY. 1 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_1/PRY. 1 (ORANGE).jpg" alt="Primary 1 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 1 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_1/PRY. 1  (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_1/PRY. 1  (LEMON).jpg" alt="Primary 1 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 1 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 2 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Primary 2</h3>
+                            <p class="teachers">Teachers: Mrs. Adekoya, Mrs. Arigbabuwo, Mr. Omoseebi, Mrs. Okunore, Mrs. Oluremi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_2/PRY. 2 (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_2/PRY. 2 (LEMON).jpg" alt="Primary 2 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 2 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_2/PRY. 2 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_2/PRY. 2 (ORANGE).jpg" alt="Primary 2 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 2 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_2/PRY. 2 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_2/PRY. 2 (YELLOW).jpg" alt="Primary 2 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 2 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 3 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Primary 3</h3>
+                            <p class="teachers">Teachers: Mrs. Francis, Mr. Lawal, Mrs Oladipupo, Mrs Oreagba.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_3/PRY. 3 (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_3/PRY. 3 (LEMON).jpg" alt="Primary 3 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 3 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_3/PRY. 3 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_3/PRY. 3 (ORANGE).jpg" alt="Primary 3 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 3 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_3/PRY. 3 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_3/PRY. 3 (YELLOW).jpg" alt="Primary 3 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 3 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 4 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Primary 4</h3>
+                            <p class="teachers">Teachers: Miss Adegoke, Mr. Adeusi, Mrs Legunsen, Mrs. Ogungbemi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_4/PRY. 4 (LEMON).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_4/PRY. 4 (LEMON).jpg" alt="Primary 4 - Lemon" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 4 - Lemon</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_4/PRY. 4 (ORANGE).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_4/PRY. 4 (ORANGE).jpg" alt="Primary 4 - Orange" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 4 - Orange</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_4/PRY. 4 (YELLOW).jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_4/PRY. 4 (YELLOW).jpg" alt="Primary 4 - Yellow" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 4 - Yellow</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 5 Section -->
+                <div class="class-group-section mb-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-8 text-center">
+                            <h3 class="class-group-title">Primary 5</h3>
+                            <p class="teachers">Teachers: Mrs. Olaosebikan, Mrs Ogunleye, Mrs Nelson, Mr. Bakre</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 ftco-animate">
+                            <div class="gallery-item">
+                                <div class="gallery-img">
+                                    <a href="images/CLASS GROUPS/Primary_5/PRY 5.jpg" class="image-popup">
+                                        <img src="images/CLASS GROUPS/Primary_5/PRY. 5.jpg" alt="Primary 5 - Emerald" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="gallery-caption">
+                                    <h3>Primary 5</h3>
+                                    <p>Class of 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="ftco-gallery">
+        <div class="container-wrap">
+            <div class="row no-gutters">
+                <div class="col-md-3 ftco-animate">
+                    <a href="admission.html" class="gallery img d-flex align-items-center" style="background-image: url(images/course-1.jpg);">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="academics.html" class="gallery img d-flex align-items-center" style="background-image: url(images/course-2.jpg);">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="courses.html" class="gallery img d-flex align-items-center" style="background-image: url(images/course-3.jpg);">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 ftco-animate">
+                    <a href="contact.html" class="gallery img d-flex align-items-center" style="background-image: url(images/course-4.jpg);">
+                        <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                            <span class="icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">Off Stadium Road, GRA, Ijebu Ode</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 807 455 2156</span></a></li>
+                                <li><a href="mailto:info@treasurelandschools.com"><span class="icon icon-envelope"></span><span class="text">info@treasurelandschools.com</span></a></li>
+                            </ul>
+                        </div>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                            <li class="ftco-animate"><a href="https://www.tiktok.com/treasurelandschools"><span class="icon-tiktok"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/treasurelandschoolijebuode"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/treasurelandschools"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Quick Links</h2>
+                        <div class="block-21 mb-4 d-flex">
+                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                            <div class="text">
+                                <h3 class="heading"><a href="#">Our Vision & Mission</a></h3>
+                                <div class="meta">
+                                    <div><a href="#"><span class="icon-calendar"></span> Our Philosophy</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5 ml-md-4">
+                        <h2 class="ftco-heading-2">Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                            <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                            <li><a href="academics.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Academics</a></li>
+                            <li><a href="courses.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Extracurricular</a></li>
+                            <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Subscribe Us!</h2>
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="form-control submit px-3">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy; <style>
+                            .top-bar-container {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                z-index: 1031;
+                                transition: all 0.3s ease;
+                            }
+
+                            #topBar {
+                                transition: all 0.3s ease;
+                                overflow: hidden;
+                            }
+
+                            #topBar.collapsed {
+                                height: 0;
+                                padding: 0;
+                                margin: 0;
+                                border: none;
+                            }
+
+                            .top-bar-toggle {
+                                position: absolute;
+                                right: 15px;
+                                top: 5px;
+                                background: rgba(0, 0, 0, 0.2);
+                                border: none;
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                z-index: 1032;
+                                transition: all 0.3s ease;
+                            }
+
+                            .top-bar-toggle:hover {
+                                background: rgba(0, 0, 0, 0.4);
+                            }
+
+                            .top-bar-toggle i {
+                                transition: transform 0.3s ease;
+                            }
+
+                            .top-bar-toggle.collapsed i {
+                                transform: rotate(180deg);
+                            }
+
+                            /* Adjust main content when top bar is collapsed */
+                            body.top-bar-collapsed {
+                                padding-top: 73px;
+                                /* Height of navbar */
+                            }
+
+                            body.top-bar-expanded {
+                                padding-top: 113px;
+                                /* Height of navbar + top bar */
+                            }
+                        </style>
+
+
+                        <!-- Load jQuery first -->
+                        <script src="js/jquery.min.js"></script>
+                        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+                        <!-- Then load Popper.js, then Bootstrap JS -->
+                        <script src="js/popper.min.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+
+                        <!-- Then other plugins -->
+                        <script src="js/jquery.easing.1.3.js"></script>
+                        <script src="js/jquery.waypoints.min.js"></script>
+                        <script src="js/jquery.stellar.min.js"></script>
+                        <script src="js/owl.carousel.min.js"></script>
+                        <script src="js/jquery.magnific-popup.min.js"></script>
+                        <script src="js/aos.js"></script>
+                        <script src="js/jquery.animateNumber.min.js"></script>
+                        <script src="js/scrollax.min.js"></script>
+
+                        <!-- Custom scripts -->
+                        <script src="js/custom.js"></script>
+                        <script src="js/main.js"></script>
+                        <script src="js/topbar-toggle.js"></script>
+
+                        <!-- Initialize dropdowns and gallery -->
+                        <script>
+                            $(document).ready(function() {
+                                // Initialize dropdowns
+                                $('.dropdown-toggle').dropdown();
+
+                                // Make dropdown work on hover for desktop
+                                $('.dropdown').on('mouseenter', function() {
+                                    if ($(window).width() > 991) {
+                                        $(this).addClass('show');
+                                        $(this).find('.dropdown-menu').addClass('show');
+                                    }
+                                }).on('mouseleave', function() {
+                                    if ($(window).width() > 991) {
+                                        $(this).removeClass('show');
+                                        $(this).find('.dropdown-menu').removeClass('show');
+                                    }
+                                });
+
+                                // Close dropdowns when clicking outside
+                                $(document).on('click', function(e) {
+                                    if (!$(e.target).closest('.dropdown').length) {
+                                        $('.dropdown-menu').removeClass('show');
+                                    }
+                                });
+
+                                // Initialize Magnific Popup for image lightbox
+                                $('.image-popup').magnificPopup({
+                                    type: 'image',
+                                    gallery: {
+                                        enabled: true
+                                    },
+                                    image: {
+                                        verticalFit: true
+                                    }
+                                });
+
+                                // Gallery filter functionality
+                                $('.gallery-filter button').on('click', function() {
+                                    var value = $(this).attr('data-filter');
+                                    $('.gallery-filter button').removeClass('active');
+                                    $(this).addClass('active');
+
+                                    if (value === 'all') {
+                                        $('.gallery-item').show('1000');
+                                    } else {
+                                        $('.gallery-item').not('.' + value).hide('1000');
+                                        $('.gallery-item').filter('.' + value).show('1000');
+                                    }
+                                });
+                            });
+                        </script>
+
+</body>
+
+</html>

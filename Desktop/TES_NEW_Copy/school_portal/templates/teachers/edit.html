@@ -1,0 +1,128 @@
+{% extends "teachers/base.html" %}
+
+{% block title %}Edit {{ teacher.user.first_name }} {{ teacher.user.last_name }} - Teacher{% endblock %}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item">
+        <a href="{{ url_for('view_teacher', teacher_id=teacher.teacher_id) }}">
+            {{ teacher.user.first_name }} {{ teacher.user.last_name }}
+        </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+{% endblock %}
+
+{% block teacher_content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Edit Teacher Information</h5>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('edit_teacher', teacher_id=teacher.teacher_id) }}" enctype="multipart/form-data">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h6 class="border-bottom pb-2 mb-3">Personal Information</h6>
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" 
+                               value="{{ teacher.user.first_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" 
+                               value="{{ teacher.user.last_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                               value="{{ teacher.user.email }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" 
+                               value="{{ teacher.user.phone_number or '' }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" name="address" rows="2">{{ teacher.user.address or '' }}</textarea>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h6 class="border-bottom pb-2 mb-3">Professional Information</h6>
+                    <div class="mb-3">
+                        <label for="employee_id" class="form-label">Employee ID</label>
+                        <input type="text" class="form-control" id="employee_id" 
+                               value="{{ teacher.employee_id }}" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="specialization" class="form-label">Department/Specialization</label>
+                        <input type="text" class="form-control" id="specialization" name="specialization" 
+                               value="{{ teacher.specialization or '' }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="qualification" class="form-label">Qualifications</label>
+                        <input type="text" class="form-control" id="qualification" name="qualification" 
+                               value="{{ teacher.qualification or '' }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="date_hired" class="form-label">Date Hired</label>
+                        <input type="date" class="form-control" id="date_hired" 
+                               value="{{ teacher.date_hired.strftime('%Y-%m-%d') if teacher.date_hired else '' }}" disabled>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="profile_image" class="form-label">Profile Image</label>
+                        {% if teacher.image_path %}
+                        <div class="mb-2">
+                            <img src="{{ url_for('static', filename=teacher.image_path) }}" 
+                                 alt="Current Profile Image" 
+                                 class="img-thumbnail" 
+                                 style="max-width: 150px; max-height: 150px;">
+                        </div>
+                        {% endif %}
+                        <input type="file" class="form-control" id="profile_image" name="profile_image" accept="image/*">
+                        <div class="form-text">Upload a new profile image (JPG, PNG, max 2MB)</div>
+                    </div>
+                    
+                    <h6 class="border-bottom pb-2 mb-3 mt-4">Change Password</h6>
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password"
+                               placeholder="Leave blank to keep current password">
+                        <div class="form-text">Password must be at least 8 characters long.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                <a href="{{ url_for('view_teacher', teacher_id=teacher.teacher_id) }}" class="btn btn-secondary">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    // Add form validation
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        const newPassword = document.getElementById('new_password');
+        
+        form.addEventListener('submit', function(event) {
+            // Only validate password if it's provided
+            if (newPassword.value && newPassword.value.length < 8) {
+                event.preventDefault();
+                alert('Password must be at least 8 characters long.');
+                newPassword.focus();
+            }
+        });
+    });
+</script>
+{% endblock %}

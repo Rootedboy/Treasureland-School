@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Our Team - Treasureland Elementary School</title>
+    <link rel="icon" type="image/png" href="images/TES-Logo512-nobg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css?v=1.0">
+    <link rel="stylesheet" href="css/animate.css?v=1.0">
+    <link rel="stylesheet" href="css/owl.carousel.min.css?v=1.0">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css?v=1.0">
+    <link rel="stylesheet" href="css/magnific-popup.css?v=1.0">
+    <link rel="stylesheet" href="css/aos.css?v=1.0">
+    <link rel="stylesheet" href="css/ionicons.min.css?v=1.0">
+    <link rel="stylesheet" href="css/flaticon.css?v=1.0">
+    <link rel="stylesheet" href="css/icomoon.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/readmore.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Top Bar Styles */
+        .top-bar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1031;
+            transition: all 0.3s ease;
+        }
+
+        #topBar {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        #topBar.collapsed {
+            height: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        .top-bar-toggle {
+            position: absolute;
+            right: 15px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1032;
+            transition: all 0.3s ease;
+        }
+
+        .top-bar-toggle:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .top-bar-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .top-bar-toggle.collapsed i {
+            transform: rotate(180deg);
+        }
+
+        body.top-bar-collapsed {
+            padding-top: 73px;
+            /* Height of navbar */
+        }
+
+        body.top-bar-expanded {
+            padding-top: 113px;
+            /* Height of navbar + top bar */
+        }
+
+        /* Adjust body padding for fixed top bar and navbar */
+        body {
+            padding-top: 153px;
+            /* Top bar + navbar height */
+        }
+
+        @media (max-width: 991.98px) {
+            body {
+                padding-top: 133px;
+                /* Adjust for mobile */
+            }
+        }
+
+        .team-section {
+            padding: 4em 0 7em 0;
+        }
+
+        .team-category {
+            margin-bottom: 50px;
+        }
+
+        .team-category h2 {
+            color: #1e7e34;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .team-category h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background: #1e7e34;
+        }
+
+        .staff {
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .staff:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-wrap {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .img-wrap .img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: top center;
+            transition: all 5s ease;
+        }
+
+        .staff:hover .img {
+            background-position: bottom center;
+        }
+
+        .staff .text {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .staff h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .staff .position {
+            color: #1e7e34;
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .staff .faded {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .readmore-text {
+            display: none;
+        }
+
+        .readmore-btn {
+            color: #1e7e34;
+            cursor: pointer;
+            font-weight: 500;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .readmore-btn:after {
+            content: 'Read More';
+        }
+
+        .readmore-btn.active:after {
+            content: 'Read Less';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar-container">
+        <button id="topBarToggle" class="top-bar-toggle" aria-label="Toggle top bar">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="topBar" class="py-2 bg-primary">
+            <div class="container">
+                <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+                    <div class="col-lg-12 d-block">
+                        <div class="row d-flex">
+                            <div class="col-md-5 pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Treasureland+Elementary+School+Ijebu+Ode" target="_blank" class="text text-white">Block 37 JDPC, Off Stadium Road, Opp Farmers Market, GRA, Ijebu Ode</a>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                                <a href="mailto:info@treasurelandschools.com" class="text text-white">info@treasurelandschools.com</a>
+                            </div>
+                            <div class="col-md pr-4 d-flex topper align-items-center">
+                                <div class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                                <a href="https://wa.me/+234 807 455 2156" target="_blank" class="text text-white">+234 807 455 2156</a>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="social-links">
+                                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" style="top: 40px; width: 100%;">
+        <div class="container px-2">
+            <div class="d-flex align-items-center w-100">
+                <!-- School Logo and Name -->
+                <a class="navbar-brand d-flex align-items-center p-0 mr-2" href="index.html">
+                    <img src="images/logo.png" alt="School Logo" class="img-fluid mr-2" style="max-height: 36px; width: auto;">
+                    <div class="d-none d-md-flex flex-column" sutyle="line-height: 1.1;">
+                        <span class="text-white font-weight-bold mb-0" style="font-size: 1.1rem;">TREASURELAND ELEMENTARY</span>
+                        <span class="text-white-50" style="font-size: 0.7rem;">...building a total child</span>
+                    </div>
+                </a>
+
+                <!-- Mobile menu toggle button -->
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Search Form -->
+                <div class="search-container ml-auto d-none d-lg-block" style="max-width: 200px;">
+                    <form id="searchForm" class="form-inline my-0">
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-sm" type="search" placeholder="Search..." aria-label="Search" id="searchInput" style="font-size: 0.85rem; height: 32px;">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light btn-sm" type="submit" style="padding: 0.25rem 0.5rem;">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span> Menu
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mx-auto align-items-center" style="flex-wrap: nowrap;">
+                    <li class="nav-item ml-2">
+                        <a href="http://tes.edves.net/login/" class="btn btn-warning btn-sm text-dark font-weight-bold" target="_blank" style="white-space: nowrap; padding: 0.4rem 1rem; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+                            <i class="fas fa-sign-in-alt mr-1"></i> School Portal
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home mr-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-info-circle mr-2"></i>About Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <a class="dropdown-item" href="about.html">
+                                <i class="fas fa-school mr-2"></i>About Us
+                            </a>
+                            <a class="dropdown-item" href="school-history.html">
+                                <i class="fas fa-history mr-2"></i>School History
+                            </a>
+                            <a class="dropdown-item" href="founder-message.html">
+                                <i class="fas fa-quote-left mr-2"></i>Founder's Message
+                            </a>
+                            <a class="dropdown-item" href="mission-vision.html">
+                                <i class="fas fa-bullseye mr-2"></i>Mission & Vision
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-graduation-cap mr-2"></i>Academics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="academicsDropdown">
+                            <a class="dropdown-item" href="academics.html#creche">
+                                <i class="fas fa-baby mr-2"></i>Creche
+                            </a>
+                            <a class="dropdown-item" href="academics.html#preschool">
+                                <i class="fas fa-child mr-2"></i>Pre-School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#primary">
+                                <i class="fas fa-school mr-2"></i>Primary School
+                            </a>
+                            <a class="dropdown-item" href="academics.html#extracurricular">
+                                <i class="fas fa-futbol mr-2"></i>Extra Curricular Activities
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admission.html" class="nav-link">
+                            <i class="fas fa-file-signature mr-2"></i>Admission
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-users mr-2"></i>Our Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                            <a class="dropdown-item" href="Our_Team.html#admin">
+                                <i class="fas fa-user-tie mr-2"></i>Admin Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#teaching">
+                                <i class="fas fa-chalkboard-teacher mr-2"></i>Teaching Staff
+                            </a>
+                            <a class="dropdown-item" href="Our_Team.html#non-teaching">
+                                <i class="fas fa-hands-helping mr-2"></i>Non-Teaching Staff
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">
+                            <i class="fas fa-images mr-2"></i>Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">
+                            <i class="fas fa-blog mr-2"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-envelope mr-2"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <!-- About Us Section -->
+    <section class="ftco-section ftco-no-pt ftc-no-pb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
+                    <div class="text px-4 ftco-animate">
+                        <h2 class="mb-4">Welcome to Treasureland Elementary School</h2>
+                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+                        <p>For over a decade, Treasureland Elementary School has been shaping young minds and building futures. Our commitment to academic excellence, character development, and holistic education has made us a beacon of learning in our community. Join us as we continue our journey of nurturing tomorrow's leaders.</p>
+                    </div>
+                </div>
+                <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+                    <h2 class="mb-4">Our Dedicated Team</h2>
+                    <p>At Treasureland Elementary School, we are proud of our team of passionate educators and staff who work tirelessly to create a nurturing and stimulating learning environment for our students. Our team is comprised of highly qualified professionals who are committed to excellence in education and the holistic development of every child.</p>
+                    <p>Our staff members are carefully selected for their expertise, dedication, and passion for teaching. They undergo continuous professional development to stay current with the latest educational practices and methodologies, ensuring that our students receive the highest quality education possible.</p>
+
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-doctor"></span></div>
+                                <div class="text">
+                                    <h3>More than 30+</h3>
+                                    <p>Qualified Teachers</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
+                                <div class="text">
+                                    <h3>More than 100+</h3>
+                                    <p>Successful Kids</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-family"></span></div>
+                                <div class="text">
+                                    <h3>More than 564</h3>
+                                    <p>Happy Parents</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-trophy"></span></div>
+                                <div class="text">
+                                    <h3>More than 300</h3>
+                                    <p>Awards Won</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+                                <div class="text">
+                                    <h3>Safety First</h3>
+                                    <p>We prioritize the safety and well-being of every child in our care.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-teacher"></span></div>
+                                <div class="text">
+                                    <h3>Certified Teachers</h3>
+                                    <p>Our dedicated and experienced teachers are committed to excellence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results Modal -->
+    <div class="modal fade" id="searchResultsModal" tabindex="-1" role="dialog" aria-labelledby="searchResultsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchResultsModalLabel">Search Results</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="searchResultsBody">
+                    <!-- Search results will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-2 bread">Our Team</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Our Team</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Staff Section -->
+    <section class="team-section" id="admin">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Administrative <span>Team</span></h2>
+                    <p>Meet our dedicated administrative staff who work tirelessly to ensure the smooth operation of our school.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <!-- Director -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/grandpa.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mr. R.A. Ogunyemi</h3>
+                            <span class="position mb-2">Director</span>
+                            <div class="faded">
+                                <p class="readmore-text">Our dedicated Manager oversees the daily operations of the school, ensuring that all administrative functions run smoothly to support our educational mission.</p>
+                                <p>"Efficiency is doing things right; effectiveness is doing the right things."</p>
+                                <p class="readmore-btn"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Proprietor -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/grandma.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mrs. E.E. Ogunyemi</h3>
+                            <span class="position mb-2">Proprietor</span>
+                            <div class="faded">
+                                <p class="readmore-text">With years of experience in educational leadership, our Director/Proprietor provides visionary guidance to ensure the school's continued excellence and adherence to its core values.</p>
+                                <p>"Education is the most powerful weapon which you can use to change the world."</p>
+                                <p class="readmore-btn"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director of Curriculum Development -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Uncle_Bimbo.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mr. A.A. Ogunyemi</h3>
+                            <span class="position mb-2">Director of Curriculum Development</span>
+                            <div class="faded">
+                                <p class="readmore-text">Overseeing the development and implementation of our comprehensive curriculum to ensure academic excellence and alignment with educational standards.</p>
+                                <p>"Curriculum is the foundation of quality education and the roadmap to student success."</p>
+                                <p class="readmore-btn"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of Preschool -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Awoma.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Miss F.O. Awoma</h3>
+                            <span class="position mb-2">Director of Preschool</span>
+                            <div class="faded">
+                                <p class="readmore-text">Leading our preschool department with passion and expertise, ensuring our youngest learners receive the best possible start to their educational journey.</p>
+                                <p>"The first five years have so much to do with how the next 80 turn out."</p>
+                                <p class="readmore-btn"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Head of Primary School -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Olaosebikan.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mrs. O. Olaosebikan</h3>
+                            <span class="position mb-2">Director of Primary School</span>
+                            <div class="faded">
+                                <p class="readmore-text">With a strong commitment to academic excellence, our Director of Primary oversees the primary school curriculum and ensures high standards of teaching and learning.</p>
+                                <p>"Education is not preparation for life; education is life itself."</p>
+                                <p class="readmore-btn"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Staff Section -->
+    <section class="team-section bg-light" id="teaching">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Teaching <span>Staff</span></h2>
+                    <p>Our passionate and experienced educators who are committed to nurturing young minds.</p>
+                </div>
+            </div>
+
+            <!-- Early Years Section -->
+            <div class="class-group mb-5">
+                <h3 class="text-center mb-4">Early Years Department</h3>
+                <div class="row">
+                    <!-- Creche HOD -->
+                    <div class="col-md-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/CRECHE STAFF/Ideh P. Mrs._HOD.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. Ideh P.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Creche</span>
+                                <div class="faded">
+                                    <p>Providing nurturing care for our youngest learners</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="creche">View Creche Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creche Staff -->
+                    <div id="creche-staff" class="row mt-4" style="display: none;">
+                        <!-- Staff 1 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url('images/CRECHE STAFF/Adisa A. Mrs..jpg');"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. Adisa A.</h3>
+                                    <span class="position mb-2">Creche Staff</span>
+                                    <div class="faded">
+                                        <p>Providing loving care to our youngest learners</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Staff 2 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url('images/CRECHE STAFF/Alagbala O. Mrs..jpg');"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. Alagbala O.</h3>
+                                    <span class="position mb-2">Creche Staff</span>
+                                    <div class="faded">
+                                        <p>Supporting early childhood development</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Staff 3 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url('images/CRECHE STAFF/Olaitan O. Mrs..jpg');"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. Olaitan O.</h3>
+                                    <span class="position mb-2">Creche Staff</span>
+                                    <div class="faded">
+                                        <p>Creating a safe and nurturing environment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Playgroup HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Playgroup/BADEJO%20M.%20O_Playgroup_Hod_Lemon.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Miss. BADEJO M. O.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Playgroup</span>
+                                <div class="faded">
+                                    <p>Nurturing our youngest learners through play</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="playgroup">View Playgroup Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Playgroup Staff -->
+                    <div id="playgroup-staff" class="row mt-4" style="display: none;">
+                        <!-- Staff 1 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url(images/Teachers/Playgroup/ABIOLA%20A.%20A_Lemon.jpg);"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. ABIOLA A. A.</h3>
+                                    <span class="position mb-2">Playgroup Teacher (Lemon)</span>
+                                    <div class="faded">
+                                        <p>Creating joyful learning experiences</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Staff 2 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url(images/Teachers/Playgroup/ADEDAMOLA%20A_Yellow.jpg);"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. ADEDAMOLA A.</h3>
+                                    <span class="position mb-2">Playgroup Teacher (Yellow)</span>
+                                    <div class="faded">
+                                        <p>Encouraging exploration and discovery</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Staff 3 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url(images/Teachers/Playgroup/ADEGBITE%20A_Yellow.jpg);"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. ADEGBITE A.</h3>
+                                    <span class="position mb-2">Playgroup Assistant (Yellow)</span>
+                                    <div class="faded">
+                                        <p>Supporting early development</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Staff 4 -->
+                        <div class="col-md-4 col-lg-2-4 ftco-animate">
+                            <div class="staff">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url(images/Teachers/Playgroup/MRS.%20AKINDELE_Gold.jpg);"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>Mrs. AKINDELE</h3>
+                                    <span class="position mb-2">Playgroup Teacher (Gold)</span>
+                                    <div class="faded">
+                                        <p>Inspiring young minds</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preparatory HOD -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/AKINLOYE%20B_Preparatory_Hod_Yellow.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mrs. AKINLOYE B.</h3>
+                            <span class="position mb-2" style="color: #FFA500;">Head of Preparatory</span>
+                            <div class="faded">
+                                <p>Laying strong educational foundations</p>
+                                <button class="btn btn-primary btn-view-staff mt-2" data-class="preparatory">View Preparatory Staff</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preparatory Staff -->
+                <div id="preparatory-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/AINA%20T_Gold.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. AINA T.</h3>
+                                <span class="position mb-2">Preparatory Teacher (Gold)</span>
+                                <div class="faded">
+                                    <p>Building strong foundations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/AJAYINO.%20O_Orange.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Miss. AJAYINO O.</h3>
+                                <span class="position mb-2">Preparatory Teacher (Orange)</span>
+                                <div class="faded">
+                                    <p>Encouraging curiosity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/MISS%20MURAINA_Lemon.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. MURAINA</h3>
+                                <span class="position mb-2">Preparatory Teacher (Lemon)</span>
+                                <div class="faded">
+                                    <p>Inspiring young learners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 4 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/OGUNBIYI%20E.%20O_Orange.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OGUNBIYI E. O.</h3>
+                                <span class="position mb-2">Preparatory Assistant (Orange)</span>
+                                <div class="faded">
+                                    <p>Supporting student growth</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 5 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/OLAYINKA%20O_Yellow.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OLAYINKA O.</h3>
+                                <span class="position mb-2">Preparatory Teacher (Yellow)</span>
+                                <div class="faded">
+                                    <p>Nurturing young minds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 6 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Preparatory/OSINEYE%20F_Lemon.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OSINEYE F.</h3>
+                                <span class="position mb-2">Preparatory Assistant (Lemon)</span>
+                                <div class="faded">
+                                    <p>Encouraging learning through play</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Nursery Section -->
+        <div class="class-group mb-5">
+            <h3 class="text-center mb-4">Nursery Department</h3>
+            <div class="row">
+                <!-- Nursery 1 HOD -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%201/ABISAGBO%20A_Nursery1_HOD.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mrs. ABISAGBO A.</h3>
+                            <span class="position mb-2">Head of Nursery 1</span>
+                            <div class="faded">
+                                <p>Qualified and experienced educator leading our Nursery 1 class.</p>
+                                <button class="btn btn-primary btn-view-staff mt-2" data-class="nursery1">View Nursery 1 Staff</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nursery 1 Staff -->
+                <div id="nursery1-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%201/AKPOJOTOR%20G.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Miss. AKPOJOTOR G.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Nursery 1 Yellow</span>
+                                <div class="faded">
+                                    <p>Early childhood education specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%201/JIMOH%20B.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. JIMOH</h3>
+                                <span class="position mb-2">Nursery 1 Lemon</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Staff 2 -->
+
+                    <!--Staff 3-->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Nursery%201/AKINTAN%20PRECIOUS.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>AKINTAN PRECIOUS </h3>
+                                <span class="position mb-2">Nursery 1 Lemon</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Staff 3 -->
+
+                    <!--Staff 4-->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Nursery%201/BADEJO%20O.%20A.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs.O.A. BADEJO</h3>
+                                <span class="position mb-2">Nursery Gold</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Staff 4 -->
+
+                    <!--Staff 5-->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%201/AYANTOLA%20A.%20K.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>MISS AYANTOLA</h3>
+                                <span class="position mb-2">Nursery 1 Assistant</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Staff 6 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%201/__AJAWA%20K.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>MISS __AJAWA.</h3>
+                                <span class="position mb-2">Nursery 1 Gold</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nursery 2 HOD -->
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%202/TAIWO%20H.%20I.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Miss. TAIWO H. I.</h3>
+                            <span class="position mb-2" style="color: #FFD700;">Head of Nursery 2</span>
+                            <div class="faded">
+                                <p>Qualified and experienced educator leading our Nursery 2 class.</p>
+                                <button class="btn btn-primary btn-view-staff mt-2" data-class="nursery2">View Nursery 2 Staff</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nursery 2 Staff -->
+                <div id="nursery2-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%202/ADEBANJO%20B.%20A_Yellow.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Miss. ADEBANJO B. A.</h3>
+                                <span class="position mb-2">Nursery 2 Teacher (Yellow)</span>
+                                <div class="faded">
+                                    <p>Creating a nurturing learning environment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Primary%201/BANJO%20D.%20M.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. D.M. BANJO</h3>
+                                <span class="position mb-2">Nursery 2 Assistant</span>
+                                <div class="faded">
+                                    <p>Supporting student success</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Primary%201/FOWOSIRE%20A.%20M.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. A.M. FOWOSIRE</h3>
+                                <span class="position mb-2">Nursery 2 Assistant</span>
+                                <div class="faded">
+                                    <p>Supporting early learning development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%202/ODUNEYE%20F.%20A_.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ODUNEYE F. A.</h3>
+                                <span class="position mb-2">Nursery 2 Teacher</span>
+                                <div class="faded">
+                                    <p>Early childhood education specialist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url(images/Teachers/Nursery%202/ZIBORKEDE%20J.%20A_Yellow.jpg);"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ZIBORKEDE J. A.</h3>
+                                <span class="position mb-2">Nursery 2 Teacher (Yellow)</span>
+                                <div class="faded">
+                                    <p>Supporting early learning and development</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+    </section>
+
+    <!-- Primary School Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="class-group">
+                <h3 class="text-center mb-4">Primary School Department</h3>
+                <div class="row">
+                    <!-- Primary 1 HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%201/MABOLU%20M.%20I_Primary%201_Hod.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. MABOLU M. I.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Primary 1</span>
+                                <div class="faded">
+                                    <p>Leading our youngest primary students with care and expertise</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="primary1">View Primary 1 Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary 2 HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%202/ARIGBABUWO%20O.%20R_Primary2_Hod.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ARIGBABUWO O. R.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Primary 2</span>
+                                <div class="faded">
+                                    <p>Guiding students through their second year of primary education</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="primary2">View Primary 2 Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary 3 HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%203/OREAGBA%20T.%20A+Primary3_Hod.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OREAGBA T. A.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Primary 3</span>
+                                <div class="faded">
+                                    <p>Nurturing young minds in their third year of primary education</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="primary3">View Primary 3 Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary 4 HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%204/ADEGOKE%20F.%20G_Primary4_Hod.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ADEGOKE F. G.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Primary 4</span>
+                                <div class="faded">
+                                    <p>Leading our fourth year primary students to excellence</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="primary4">View Primary 4 Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary 5 HOD -->
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%205/OGUNLEYE%20M.%20O_Primary%205_Hod.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OGUNLEYE M. O.</h3>
+                                <span class="position mb-2" style="color: #FFD700;">Head of Primary 5</span>
+                                <div class="faded">
+                                    <p>Preparing our senior primary students for success</p>
+                                    <button class="btn btn-primary btn-view-staff mt-2" data-class="primary5">View Primary 5 Staff</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 1 Staff -->
+                <div id="primary1-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%201/FAJEMIDAGBA%20M.%20B.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. FAJEMIDAGBA M. B.</h3>
+                                <span class="position mb-2">Primary 1 Teacher</span>
+                                <div class="faded">
+                                    <p>Dedicated to providing a strong foundation for young learners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%201/KOWE%20B.%20M.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. KOWE B. M.</h3>
+                                <span class="position mb-2">Primary 1 Teacher</span>
+                                <div class="faded">
+                                    <p>Passionate about early childhood education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%201/OKUNOWO%20S.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mr. OKUNOWO S. O.</h3>
+                                <span class="position mb-2">Primary 1 Teacher</span>
+                                <div class="faded">
+                                    <p>Inspiring young minds to explore and learn</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 2 Staff -->
+                <div id="primary2-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%202/ADEKOYA%20T.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ADEKOYA T. O.</h3>
+                                <span class="position mb-2">Primary 2 Teacher</span>
+                                <div class="faded">
+                                    <p>Creating engaging learning experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%202/OKUNORE%20O.%20A.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OKUNORE O. A.</h3>
+                                <span class="position mb-2">Primary 2 Teacher</span>
+                                <div class="faded">
+                                    <p>Fostering a love for learning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%202/OLUREMI%20T.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OLUREMI T.</h3>
+                                <span class="position mb-2">Primary 2 Teacher</span>
+                                <div class="faded">
+                                    <p>Inspiring young minds to achieve their best</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 4 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%202/OMOSEEBI%20O.%20J.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OMOSEEBI O. J.</h3>
+                                <span class="position mb-2">Primary 2 Teacher</span>
+                                <div class="faded">
+                                    <p>Dedicated to student success</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 3 Staff -->
+                <div id="primary3-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%203/FRANCIS%20V.%20E.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. FRANCIS V. E.</h3>
+                                <span class="position mb-2">Primary 3 Teacher</span>
+                                <div class="faded">
+                                    <p>Creating a positive learning environment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%203/LAWAL%20I.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. LAWAL I. O.</h3>
+                                <span class="position mb-2">Primary 3 Teacher</span>
+                                <div class="faded">
+                                    <p>Inspiring academic excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%203/OLADIPUPO%20T.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OLADIPUPO T. O.</h3>
+                                <span class="position mb-2">Primary 3 Teacher</span>
+                                <div class="faded">
+                                    <p>Nurturing curious minds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 4 Staff -->
+                <div id="primary4-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%204/ADEUSI%20C.%20K.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. ADEUSI C. K.</h3>
+                                <span class="position mb-2">Primary 4 Teacher</span>
+                                <div class="faded">
+                                    <p>Encouraging academic growth</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%204/LEGUNSEN%20O.%20R.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. LEGUNSEN O. R.</h3>
+                                <span class="position mb-2">Primary 4 Teacher</span>
+                                <div class="faded">
+                                    <p>Fostering a love for learning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%204/OGUNGBEMI%20A.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OGUNGBEMI A. O.</h3>
+                                <span class="position mb-2">Primary 4 Teacher</span>
+                                <div class="faded">
+                                    <p>Inspiring academic excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary 5 Staff -->
+                <div id="primary5-staff" class="row mt-4" style="display: none;">
+                    <!-- Staff 1 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%205/BAKRE%20B.%20B.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. BAKRE B. B.</h3>
+                                <span class="position mb-2">Primary 5 Teacher</span>
+                                <div class="faded">
+                                    <p>Preparing students for success</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 2 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%205/NELSON%20R.%20O.jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. NELSON R. O.</h3>
+                                <span class="position mb-2">Primary 5 Teacher</span>
+                                <div class="faded">
+                                    <p>Inspiring academic achievement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Staff 3 -->
+                    <div class="col-md-4 col-lg-2-4 ftco-animate">
+                        <div class="staff">
+                            <div class="img-wrap d-flex align-items-stretch">
+                                <div class="img align-self-stretch" style="background-image: url('images/Teachers/Primary%205/OLAOSEBIKAN%20O.%20R..jpg');"></div>
+                            </div>
+                            <div class="text pt-3 text-center">
+                                <h3>Mrs. OLAOSEBIKAN O. R.</h3>
+                                <span class="position mb-2">Primary 5 Teacher</span>
+                                <div class="faded">
+                                    <p>Guiding students to reach their potential</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .class-group {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .class-group h3 {
+            color: #3d5a80;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3d5a80;
+            display: inline-block;
+        }
+
+        .btn-view-staff {
+            background-color: #3d5a80;
+            border: none;
+            transition: all 0.3s ease;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .btn-view-staff:hover {
+            background-color: #2d3d57;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize all staff sections as hidden on page load
+            $('[id$="-staff"]').hide();
+
+            // Handle View Staff button clicks
+            $(document).on('click', '.btn-view-staff', function(e) {
+                e.preventDefault();
+                const $this = $(this);
+                const classId = $this.data('class');
+                const $staffSection = $('#' + classId + '-staff');
+
+                // Toggle the section with smooth animation
+                $staffSection.slideToggle(300, function() {
+                    // Update button text after animation completes
+                    const isVisible = $(this).is(':visible');
+                    const displayText = isVisible ? 'Hide ' : 'View ';
+                    $this.text(displayText + classId.charAt(0).toUpperCase() + classId.slice(1) + ' Staff');
+                });
+            });
+        });
+    </script>
+
+
+    <!-- ICT Department Section -->
+    <section class="team-section bg-light" id="ict-staff">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Information & Communications <span>Technology</span></h2>
+                    <p class="lead">Our dedicated ICT team works to integrate modern technology into our educational environment, ensuring a seamless digital learning experience for both students and staff. We maintain and support all technological infrastructure while promoting digital literacy across the school.</p>
+
+                    <!-- Technology Initiatives -->
+                    <div class="row mt-5 text-left">
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon mr-3">
+                                    <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Modern Computer Labs</h4>
+                                    <p>Well-equipped computer labs with up-to-date hardware and educational software to support digital literacy and 21st-century learning.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon mr-3">
+                                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">E-Learning Support</h4>
+                                    <p>Comprehensive support for digital learning platforms and educational technology integration in the classroom.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon mr-3">
+                                    <i class="fas fa-network-wired fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Technical Support</h4>
+                                    <p>Reliable maintenance and troubleshooting for all school technology infrastructure and devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon mr-3">
+                                    <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5">Staff Development</h4>
+                                    <p>Training and support for teachers to effectively integrate technology into their teaching practice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h3 class="mb-4">Our <span>ICT Team</span></h3>
+                    <p>Meet our dedicated ICT professionals who maintain and support our school's technology infrastructure.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- ICT Manager -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/BELLO%20M.%20O.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mrs. M.O. BELLO</h3>
+                            <span class="position mb-2" style="color: #3d5a80;">Head of ICT Department</span>
+                            <div class="faded">
+                                <p>Mrs. Bello oversees all ICT operations in the school, ensuring our technology supports effective teaching and learning. She manages our computer labs and provides technical support to staff and students.</p>
+                                <p>"Bridging the gap between technology and education"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Personnel -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/OLUSEGUN%20T.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Ifeoluwa T. OLUSEGUN</h3>
+                            <span class="position mb-2">IT Specialist</span>
+                            <div class="faded">
+                                <p>Mr. Olusegun provides technical support to staff and students, maintains computer systems and networks, and assists with technology integration in the classroom. He ensures all IT equipment functions properly and provides training on educational software.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Assistant -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Primary%202/OMOSEEBI%20O.%20J.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mr. O.J. OMOSEEBI</h3>
+                            <span class="position mb-2">ICT Support & Primary 2 Teacher</span>
+                            <div class="faded">
+                                <p>Mr. Omoseebi provides essential technical support while also teaching in Primary 2. His dual role helps integrate technology into classroom teaching.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Department Section -->
+    <section class="team-section" id="music-staff">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Creative <span>Arts & Music</span></h2>
+                    <p class="lead">Our Creative Arts and Music department nurtures creativity and artistic expression through comprehensive music education and performance opportunities for all students.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <!-- Music Room Manager -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Awoma.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Miss Awoma</h3>
+                            <span class="position mb-2" style="color: #3d5a80;">Music Room Manager</span>
+                            <div class="faded">
+                                <p>Miss Awoma efficiently manages our music room, ensuring all instruments are well-maintained and organized. She oversees the Brigade Club and provides essential support to the music teacher, helping to create an optimal environment for musical education and performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Music Teacher -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Music_Teacher.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mr. Alebiosu Oluwaseun</h3>
+                            <span class="position mb-2" style="color: #3d5a80;">Music Teacher</span>
+                            <div class="faded">
+                                <p>Mr. Alebiosu leads our music program, teaching students various musical instruments and vocal techniques. He directs the school choir and organizes musical performances throughout the year.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Assistant -->
+                <div class="col-md-4 col-lg-4 ftco-animate">
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url(images/Teachers/Primary%202/OMOSEEBI%20O.%20J.jpg);"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>Mr. O.J. OMOSEEBI</h3>
+                            <span class="position mb-2">Music Assistant & ICT Support</span>
+                            <div class="faded">
+                                <p>Mr. Omoseebi assists with the music program, particularly in organizing performances and maintaining musical instruments, in addition to his roles in ICT and Primary 2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Have a Question?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">123 School Street, Ijebu-Ode, Ogun State, Nigeria</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+234 807 455 2156</span></a></li>
+                                <li><a href="mailto:info@treasurelandschools.com"><span class="icon icon-envelope"></span><span class="text">info@treasurelandschools.com</span></a></li>
+                            </ul>
+                        </div>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                            <li class="ftco-animate"><a href="www.tiktok.com/treasurelandschools"><span class="icon-tiktok"></span></a></li>
+                            <li class="ftco-animate"><a href="www.facebook.com/treasurelandschoolijebuode"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="www.instagram.com/treasurelandschools"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="ftco-footer-widget mb-5 ml-md-4">
+                        <h2 class="ftco-heading-2">Links</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                            <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+                            <li><a href="academics.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Academics</a></li>
+                            <li><a href="admission.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Admission</a></li>
+                            <li><a href="Our_Team.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Our Team</a></li>
+                            <li><a href="gallery.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Gallery</a></li>
+                            <li><a href="blog.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
+                            <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2">Subscribe Us!</h2>
+                        <form action="#" class="subscribe-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                                <input type="submit" value="Subscribe" class="form-control submit px-3">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="ftco-footer-widget mb-5">
+                        <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-google"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy; <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | Treasureland Elementary School
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/topbar-toggle.js"></script>
+    <script>
+        // Update clock and date
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Update analog clock
+            const hourDegrees = (hours % 12) * 30 + (minutes / 2);
+            const minuteDegrees = minutes * 6 + (seconds / 10);
+            const secondDegrees = seconds * 6;
+
+            $('.hour-hand').css('transform', `rotate(${hourDegrees}deg)`);
+            $('.min-hand').css('transform', `rotate(${minuteDegrees}deg)`);
+            $('.second-hand').css('transform', `rotate(${secondDegrees}deg)`);
+
+            // Update date
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            };
+            const dateString = now.toLocaleDateString('en-US', options);
+            $('.current-date').text(dateString);
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // Handle View Staff button clicks
+        $(document).ready(function() {
+            $('.btn-view-staff').on('click', function() {
+                const classId = $(this).data('class');
+                $('#' + classId + '-staff').slideToggle();
+
+                // Toggle button text
+                if ($(this).text().includes('View')) {
+                    $(this).text('Hide ' + $(this).text().replace('View ', ''));
+                } else {
+                    $(this).text('View ' + $(this).text().replace('Hide ', ''));
+                }
+            });
+
+            // Initialize tooltips
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.magnific-popup.min.js?v=1.0"></script>
+    <script src="js/aos.js?v=1.0"></script>
+    <script src="js/jquery.animateNumber.min.js?v=1.0"></script>
+    <script src="js/scrollax.min.js?v=1.0"></script>
+    <script src="js/main.js?v=1.0"></script>
+    <script>
+        $(document).ready(function() {
+            // Read more/read less functionality
+            $('.readmore-btn').click(function() {
+                $(this).toggleClass('active');
+                $(this).siblings('.readmore-text').slideToggle();
+            });
+        });
+    </script>
+</body>
+
+</html>
+<script src="js/jquery.animateNumber.min.js?v=1.0"></script>
+<script src="js/scrollax.min.js?v=1.0"></script>
+<script src="js/main.js?v=1.0"></script>
+<script>
+    $(document).ready(function() {
+        // Read more/read less functionality
+        $('.readmore-btn').click(function() {
+            $(this).toggleClass('active');
+            $(this).siblings('.readmore-text').slideToggle();
+        });
+    });
+</script>
+</body>
+
+</html>
